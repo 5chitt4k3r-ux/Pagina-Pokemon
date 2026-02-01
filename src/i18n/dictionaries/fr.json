@@ -1,0 +1,38 @@
+{
+    "common": {
+        "loading": "Chargement...",
+        "error": "Quelque chose a mal tourné",
+        "back": "Retour"
+    },
+    "nav": {
+        "home": "Accueil",
+        "generations": "Générations",
+        "contact": "Contact",
+        "gen1": "1ère Génération",
+        "gen2": "2ème Génération",
+        "gen3": "3ème Génération"
+    },
+    "home": {
+        "welcome": "Bienvenue sur le Next.js PokéDex !",
+        "randomPokemon": "Votre Pokémon en vedette aujourd'hui"
+    },
+    "contact": {
+        "title": "Contact",
+        "text": "Ce site web est généré en NEXT par l'étudiant xxxx de l'IES Cura Valera."
+    },
+    "pokemon": {
+        "stats": "Statistiques",
+        "hp": "PV",
+        "attack": "Attaque",
+        "defense": "Défense",
+        "viewDetail": "Voir les détails"
+    },
+    "generation": {
+        "title": "Pokémon de la %s Génération"
+    },
+    "notFound": {
+        "title": "404 - Page non trouvée",
+        "description": "Oups ! Le Pokémon sauvage s'est enfui.",
+        "goHome": "Retour à l'accueil"
+    }
+}

@@ -1,0 +1,65 @@
+.header {
+    background-color: #ff3e3e;
+    /* Pokemon Red */
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    /* Increased max-width */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.dropdownContainer {
+    position: relative;
+    cursor: pointer;
+    padding: 0.5rem 0;
+}
+
+.dropdownTrigger:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: #333;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 150px;
+    z-index: 10;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: background 0.2s;
+}
+
+.dropdown li a:hover {
+    background-color: #f0f0f0;
+}

@@ -1,0 +1,38 @@
+{
+    "common": {
+        "loading": "Loading...",
+        "error": "Something went wrong",
+        "back": "Back"
+    },
+    "nav": {
+        "home": "Home",
+        "generations": "Generations",
+        "contact": "Contact",
+        "gen1": "1st Generation",
+        "gen2": "2nd Generation",
+        "gen3": "3rd Generation"
+    },
+    "home": {
+        "welcome": "Welcome to the Next.js PokéDex!",
+        "randomPokemon": "Your Featured Pokémon Today"
+    },
+    "contact": {
+        "title": "Contact",
+        "text": "This website is generated in NEXT by student xxxx from IES Cura Valera."
+    },
+    "pokemon": {
+        "stats": "Stats",
+        "hp": "HP",
+        "attack": "Attack",
+        "defense": "Defense",
+        "viewDetail": "View Details"
+    },
+    "generation": {
+        "title": "%s Generation Pokémon"
+    },
+    "notFound": {
+        "title": "404 - Page Not Found",
+        "description": "Oops! The wild Pokémon fled.",
+        "goHome": "Go Home"
+    }
+}

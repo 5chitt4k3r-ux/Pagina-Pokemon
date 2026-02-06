@@ -60,12 +60,14 @@ export default async function PokemonDetailView({
                 <div className="Ant-Sig">
                     <Link
                         href={`/${lang}/pokemon/${prevId}`}
+                        replace
                         className={`Anterior ${numericId === 1 ? 'opacity-50 pointer-events-none' : ''}`}
                     >
                         ← {dict.pokemon.previous}
                     </Link>
                     <Link
                         href={`/${lang}/pokemon/${nextId}`}
+                        replace
                         className={`Siguiente ${numericId === 1000 ? 'opacity-50 pointer-events-none' : ''}`}
                     >
                         {dict.pokemon.next} →

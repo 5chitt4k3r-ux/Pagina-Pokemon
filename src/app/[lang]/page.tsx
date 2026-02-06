@@ -3,6 +3,8 @@ import { getRandomPokemon } from '@/lib/pokemonApi'
 import PokemonCard from '@/components/PokemonCard'
 import styles from './page.module.css'
 
+export const dynamic = 'force-dynamic' // Mantiene la página dinámica para que el Pokemon aleatorio cambie siempre
+
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
     const lang = (await params).lang
     const dict = await getDictionary(lang as 'es' | 'en' | 'fr')

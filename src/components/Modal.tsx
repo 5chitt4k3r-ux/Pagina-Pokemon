@@ -28,7 +28,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
             if (e.key === 'Escape') onDismiss()
         })
         return () => document.removeEventListener('keydown', (e) => { if (e.key === 'Escape') onDismiss() })
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    }, []) 
 
     return (
         <div

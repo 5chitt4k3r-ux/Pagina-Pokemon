@@ -35,6 +35,7 @@ export interface PokemonDetail {
 
 const BASE_URL = 'https://pokeapi.co/api/v2';
 
+// Función para obtener una lista de Pokemons con paginación
 export async function getPokemonList(limit: number = 151, offset: number = 0): Promise<Pokemon[]> {
   try {
     const response = await fetch(`${BASE_URL}/pokemon?limit=${limit}&offset=${offset}`);
@@ -42,6 +43,7 @@ export async function getPokemonList(limit: number = 151, offset: number = 0): P
       throw new Error(`Failed to fetch pokemon list: ${response.statusText}`);
     }
     const data: PokemonListResponse = await response.json();
+    // Mapeamos los resultados para añadir el ID extraído de la URL
     return data.results.map(p => ({
       ...p,
       id: parseInt(p.url.split('/').filter(Boolean).pop() || '0')
@@ -70,6 +72,7 @@ const GENERATION_RANGES: Record<number, { limit: number; offset: number }> = {
   1: { limit: 151, offset: 0 },
   2: { limit: 100, offset: 151 },
   3: { limit: 135, offset: 251 },
+  4: { limit: 107, offset: 386 },
 };
 
 export async function getPokemonListByGeneration(genId: number): Promise<Pokemon[]> {

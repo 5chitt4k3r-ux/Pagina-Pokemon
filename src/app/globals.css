@@ -35,3 +35,31 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Navigation Buttons Styles */
+.Ant-Sig {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.Anterior,
+.Siguiente {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  /* Blue background */
+  color: #000000;
+  /* Black text */
+  font-weight: 500;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s;
+}
+
+.Anterior:hover,
+.Siguiente:hover {
+  background-color: #2563eb;
+  /* Darker blue on hover */
+}

@@ -1,6 +1,5 @@
 .header {
     background-color: #ff3e3e;
-    /* Pokemon Red */
     color: white;
     padding: 1rem 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -11,7 +10,6 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1400px;
-    /* Increased max-width */
     margin: 0 auto;
     width: 100%;
 }
@@ -62,4 +60,31 @@
 
 .dropdown li a:hover {
     background-color: #f0f0f0;
+}
+
+/* Nested Dropdown Styles */
+.dropdown li {
+    position: relative;
+    /* Needed for positioning the nested dropdown relative to the parent li */
+}
+
+.nestedDropdown {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    /* Position it to the right of the parent item */
+    background-color: white;
+    color: #333;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 150px;
+    z-index: 20;
+}
+
+/* Show nested dropdown on hover of the parent li */
+.dropdown li:hover .nestedDropdown {
+    display: block;
 }

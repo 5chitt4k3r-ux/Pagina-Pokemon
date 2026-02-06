@@ -1,3 +1,4 @@
+// Componente de carga que se muestra automáticamente mientras se obtienen datos (Suspense)
 export default function Loading() {
     return (
         <div className="flex justify-center items-center py-20">

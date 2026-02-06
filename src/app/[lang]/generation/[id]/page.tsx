@@ -3,15 +3,19 @@ import { getPokemonListByGeneration } from '@/lib/pokemonApi'
 import PokemonCard from '@/components/PokemonCard'
 import { notFound } from 'next/navigation'
 
+// Página que cambia dinámicamente según el ID de la generación
 export default async function Generation({ params }: { params: Promise<{ lang: string, id: string }> }) {
     const { lang, id } = await params
+    // Obtenemos el diccionario según el idioma
     const dict = await getDictionary(lang as 'es' | 'en' | 'fr')
     const genId = parseInt(id)
 
-    if (isNaN(genId) || genId < 1 || genId > 3) {
+    // Validación básica: solo aceptamos generaciones 1, 2 y 4 (La 3 debe dar 404 por requerimiento)
+    if (isNaN(genId) || genId < 1 || genId === 3 || genId > 4) {
         notFound()
     }
 
+    // Obtenemos la lista de pokemons de esa generación
     const pokemonList = await getPokemonListByGeneration(genId)
 
     return (

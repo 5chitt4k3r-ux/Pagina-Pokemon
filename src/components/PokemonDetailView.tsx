@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { getDictionary } from '@/i18n/get-dictionary'
 import { getPokemonDetail } from '@/lib/pokemonApi'
 import { notFound } from 'next/navigation'
@@ -18,6 +19,10 @@ export default async function PokemonDetailView({
     }
 
     const imageUrl = pokemon.sprites.other?.['official-artwork'].front_default || pokemon.sprites.front_default
+
+    const numericId = parseInt(id)
+    const prevId = numericId > 1 ? numericId - 1 : 1
+    const nextId = numericId < 1000 ? numericId + 1 : 1000
 
     return (
         <div className="bg-white rounded-xl overflow-hidden shadow-lg p-6 max-w-sm mx-auto">
@@ -50,6 +55,21 @@ export default async function PokemonDetailView({
                         <span className="font-bold" style={{ color: 'black' }}>{dict.pokemon.defense}:</span>
                         <span className="font-bold" style={{ color: 'black' }}>{pokemon.stats.find(s => s.stat.name === 'defense')?.base_stat || 0}</span>
                     </div>
+                </div>
+
+                <div className="Ant-Sig">
+                    <Link
+                        href={`/${lang}/pokemon/${prevId}`}
+                        className={`Anterior ${numericId === 1 ? 'opacity-50 pointer-events-none' : ''}`}
+                    >
+                        ← {dict.pokemon.previous}
+                    </Link>
+                    <Link
+                        href={`/${lang}/pokemon/${nextId}`}
+                        className={`Siguiente ${numericId === 1000 ? 'opacity-50 pointer-events-none' : ''}`}
+                    >
+                        {dict.pokemon.next} →
+                    </Link>
                 </div>
             </div>
         </div>

@@ -10,7 +10,9 @@
         "contact": "Contacto",
         "gen1": "1ª Generación",
         "gen2": "2ª Generación",
-        "gen3": "3ª Generación"
+        "gen3": "3ª Generación",
+        "gen4": "4ª Generación",
+        "others": "Otras"
     },
     "home": {
         "welcome": "¡Bienvenido a la PokéDex Next.js!",
@@ -25,7 +27,9 @@
         "hp": "Vida (HP)",
         "attack": "Ataque",
         "defense": "Defensa",
-        "viewDetail": "Ver Detalles"
+        "viewDetail": "Ver Detalles",
+        "previous": "Anterior",
+        "next": "Siguiente"
     },
     "generation": {
         "title": "Pokémon de la %sª Generación"

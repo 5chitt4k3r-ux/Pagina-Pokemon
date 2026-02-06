@@ -22,5 +22,4 @@
     transform: scale(1.1);
     margin-top: 2rem;
     width: 280px;
-    /* Explicit width to ensure square interaction works */
 }
